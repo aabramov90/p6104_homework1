@@ -112,3 +112,23 @@ range(problem3_df$Time)
     ## [1]  2 34
 
 # Problem 4
+
+``` r
+problem4_df = read_table2("./data/BloodPressure.txt")
+```
+
+    ## Warning: Missing column names filled in: 'X3' [3]
+
+    ## Parsed with column specification:
+    ## cols(
+    ##   Race = col_character(),
+    ##   BP = col_double(),
+    ##   X3 = col_logical()
+    ## )
+
+    ## Warning: 4 parsing failures.
+    ## row col  expected    actual                       file
+    ##  41  -- 3 columns 1 columns './data/BloodPressure.txt'
+    ##  42  -- 3 columns 1 columns './data/BloodPressure.txt'
+    ##  43  -- 3 columns 1 columns './data/BloodPressure.txt'
+    ##  44  -- 3 columns 1 columns './data/BloodPressure.txt'

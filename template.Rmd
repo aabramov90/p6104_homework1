@@ -1,0 +1,47 @@
+---
+title: "Homework 1"
+author: Alexey Abramov
+output: github_document
+---
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+```
+
+Problem 1
+
+```{r, results='markup'}
+problem1_df = 
+  tibble(
+    women_sample = c(1:11),
+    fe_level = c(15.2, 9.3, 7.6, 11.9, 10.4, 9.7, 20.4, 9.4, 11.5, 9.4, 8.3)
+    )
+fivenum(c(15.2, 9.3, 7.6, 11.9, 10.4, 9.7, 20.4, 9.4, 11.5, 9.4, 8.3))
+mean(c(15.2, 9.3, 7.6, 11.9, 10.4, 9.7, 20.4, 9.4, 11.5, 9.4, 8.3))
+var(problem1_df$fe_level)
+sd(problem1_df$fe_level)
+
+```
+
+Problem 3
+
+Importing Data
+```{r}
+problem3_df = read_table("./Pacemaker.txt")
+```
+
+Create a histogram
+```{r}
+hist(problem3_df$Time, col = "lightblue", main = "Pacemaker Data", xlab = "Time in Months")
+```
+
+Calculate the mean, median, variance and standard deviation.
+
+```{r}
+mean(problem3_df$Time)
+median(problem3_df$Time)
+var(problem3_df$Time)
+sd(problem3_df$Time)
+```
+

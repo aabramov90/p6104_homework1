@@ -4,12 +4,13 @@ author: Alexey Abramov
 output: github_document
 ---
 
+#Setup
 ```{r}
 library(tidyverse)
 library(ggplot2)
 ```
 
-Problem 1
+#Problem 1
 
 ```{r, results='markup'}
 problem1_df = 
@@ -24,19 +25,21 @@ sd(problem1_df$fe_level)
 
 ```
 
-Problem 3
+#Problem 2
 
-Importing Data
+#Problem 3
+
+##Importing Data
 ```{r}
-problem3_df = read_table("./Pacemaker.txt")
+problem3_df = read_table("./data/Pacemaker.txt")
 ```
 
-Create a histogram
+##Create a histogram
 ```{r}
 hist(problem3_df$Time, col = "lightblue", main = "Pacemaker Data", xlab = "Time in Months")
 ```
 
-Calculate the mean, median, variance and standard deviation.
+##Calculate the mean, median, variance and standard deviation.
 
 ```{r}
 mean(problem3_df$Time)
@@ -45,3 +48,9 @@ var(problem3_df$Time)
 sd(problem3_df$Time)
 ```
 
+##Calculate range
+```{r}
+range(problem3_df$Time)
+```
+
+# Problem 4

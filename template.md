@@ -2,18 +2,20 @@ Homework 1
 ================
 Alexey Abramov
 
+\#Setup
+
 ``` r
 library(tidyverse)
 ```
 
-    ## ── Attaching packages ────────────────────────────────────────────── tidyverse 1.3.0 ──
+    ## ── Attaching packages ─────────────────────────────────────────────── tidyverse 1.3.0 ──
 
     ## ✓ ggplot2 3.3.2     ✓ purrr   0.3.4
     ## ✓ tibble  3.0.3     ✓ dplyr   1.0.2
     ## ✓ tidyr   1.1.2     ✓ stringr 1.4.0
     ## ✓ readr   1.3.1     ✓ forcats 0.5.0
 
-    ## ── Conflicts ───────────────────────────────────────────────── tidyverse_conflicts() ──
+    ## ── Conflicts ────────────────────────────────────────────────── tidyverse_conflicts() ──
     ## x dplyr::filter() masks stats::filter()
     ## x dplyr::lag()    masks stats::lag()
 
@@ -21,7 +23,7 @@ library(tidyverse)
 library(ggplot2)
 ```
 
-Problem 1
+\#Problem 1
 
 ``` r
 problem1_df = 
@@ -52,12 +54,14 @@ sd(problem1_df$fe_level)
 
     ## [1] 3.681971
 
-Problem 3
+\#Problem 2
 
-Importing Data
+\#Problem 3
+
+\#\#Importing Data
 
 ``` r
-problem3_df = read_table("./Pacemaker.txt")
+problem3_df = read_table("./data/Pacemaker.txt")
 ```
 
     ## Parsed with column specification:
@@ -65,7 +69,7 @@ problem3_df = read_table("./Pacemaker.txt")
     ##   Time = col_double()
     ## )
 
-Create a histogram
+\#\#Create a histogram
 
 ``` r
 hist(problem3_df$Time, col = "lightblue", main = "Pacemaker Data", xlab = "Time in Months")
@@ -73,7 +77,7 @@ hist(problem3_df$Time, col = "lightblue", main = "Pacemaker Data", xlab = "Time 
 
 ![](template_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
-Calculate the mean, median, variance and standard deviation.
+\#\#Calculate the mean, median, variance and standard deviation.
 
 ``` r
 mean(problem3_df$Time)
@@ -98,3 +102,13 @@ sd(problem3_df$Time)
 ```
 
     ## [1] 7.045888
+
+\#\#Calculate range
+
+``` r
+range(problem3_df$Time)
+```
+
+    ## [1]  2 34
+
+# Problem 4

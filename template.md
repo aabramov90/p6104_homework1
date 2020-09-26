@@ -132,3 +132,14 @@ problem4_df = read_table2("./data/BloodPressure.txt")
     ##  42  -- 3 columns 1 columns './data/BloodPressure.txt'
     ##  43  -- 3 columns 1 columns './data/BloodPressure.txt'
     ##  44  -- 3 columns 1 columns './data/BloodPressure.txt'
+
+``` r
+problem4_df = select(problem4_df, "Race", "BP")
+
+ggplot(problem4_df, aes(x=Race, y=BP)) + 
+  geom_boxplot()
+```
+
+    ## Warning: Removed 4 rows containing non-finite values (stat_boxplot).
+
+![](template_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->

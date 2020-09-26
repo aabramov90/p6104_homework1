@@ -56,5 +56,10 @@ range(problem3_df$Time)
 # Problem 4
 ```{r}
 problem4_df = read_table2("./data/BloodPressure.txt")
+
+problem4_df = select(problem4_df, "Race", "BP")
+
+ggplot(problem4_df, aes(x=Race, y=BP)) + 
+  geom_boxplot()
 ```
 

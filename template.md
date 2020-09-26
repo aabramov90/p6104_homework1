@@ -2,7 +2,7 @@ Homework 1
 ================
 Alexey Abramov
 
-\#Setup
+# Setup
 
 ``` r
 library(tidyverse)
@@ -23,7 +23,7 @@ library(tidyverse)
 library(ggplot2)
 ```
 
-\#Problem 1
+# Problem 1
 
 ``` r
 problem1_df = 
@@ -54,11 +54,11 @@ sd(problem1_df$fe_level)
 
     ## [1] 3.681971
 
-\#Problem 2
+# Problem 2
 
-\#Problem 3
+# Problem 3
 
-\#\#Importing Data
+## Importing Data
 
 ``` r
 problem3_df = read_table("./data/Pacemaker.txt")
@@ -77,7 +77,7 @@ hist(problem3_df$Time, col = "lightblue", main = "Pacemaker Data", xlab = "Time 
 
 ![](template_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
-\#\#Calculate the mean, median, variance and standard deviation.
+## Calculate the mean, median, variance and standard deviation.
 
 ``` r
 mean(problem3_df$Time)
@@ -103,7 +103,7 @@ sd(problem3_df$Time)
 
     ## [1] 7.045888
 
-\#\#Calculate range
+## Calculate range
 
 ``` r
 range(problem3_df$Time)
@@ -112,6 +112,8 @@ range(problem3_df$Time)
     ## [1]  2 34
 
 # Problem 4
+
+## Read in data and Create a boxplot
 
 ``` r
 problem4_df = read_table2("./data/BloodPressure.txt")
@@ -123,23 +125,35 @@ problem4_df = read_table2("./data/BloodPressure.txt")
     ## cols(
     ##   Race = col_character(),
     ##   BP = col_double(),
-    ##   X3 = col_logical()
+    ##   X3 = col_character()
     ## )
 
-    ## Warning: 4 parsing failures.
+    ## Warning: 40 parsing failures.
     ## row col  expected    actual                       file
-    ##  41  -- 3 columns 1 columns './data/BloodPressure.txt'
-    ##  42  -- 3 columns 1 columns './data/BloodPressure.txt'
-    ##  43  -- 3 columns 1 columns './data/BloodPressure.txt'
-    ##  44  -- 3 columns 1 columns './data/BloodPressure.txt'
+    ##   1  -- 3 columns 2 columns './data/BloodPressure.txt'
+    ##   2  -- 3 columns 2 columns './data/BloodPressure.txt'
+    ##   3  -- 3 columns 2 columns './data/BloodPressure.txt'
+    ##   4  -- 3 columns 2 columns './data/BloodPressure.txt'
+    ##   5  -- 3 columns 2 columns './data/BloodPressure.txt'
+    ## ... ... ......... ......... ..........................
+    ## See problems(...) for more details.
 
 ``` r
-problem4_df = select(problem4_df, "Race", "BP")
-
-ggplot(problem4_df, aes(x=Race, y=BP)) + 
-  geom_boxplot()
+ggplot(problem4_df, aes(x= Race, y= BP, fill = Race)) + 
+  geom_boxplot(fill="lightblue")+
+  labs(title="Blood Lead Levels", x="Race", y = "Blood Lead Level (micrograms per deciliter)")+
+  theme_classic()
 ```
 
-    ## Warning: Removed 4 rows containing non-finite values (stat_boxplot).
-
 ![](template_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+
+# Problem 5
+
+``` r
+set.seed(124)
+problem5_df = 
+  tibble(
+    student = 1:20,
+    testscore = rnorm(20, 250, 50)
+  )
+```

@@ -149,6 +149,8 @@ ggplot(problem4_df, aes(x= Race, y= BP, fill = Race)) +
 
 # Problem 5
 
+Create a random distribution of 20 test scores with mean = 250, sd = 50.
+
 ``` r
 set.seed(124)
 problem5_df = 
@@ -156,4 +158,48 @@ problem5_df =
     student = 1:20,
     testscore = rnorm(20, 250, 50)
   )
+mean1 = mean(problem5_df$testscore)
+mean1
 ```
+
+    ## [1] 250.5601
+
+``` r
+var1 = var(problem5_df$testscore)
+var1
+```
+
+    ## [1] 2049.479
+
+Now increase the test scores by 25% and calculate the new variance.
+
+``` r
+problem5_df_2 = problem5_df$testscore*1.25
+mean2 = mean(problem5_df_2)
+mean2
+```
+
+    ## [1] 313.2002
+
+``` r
+var2 = var(problem5_df_2)
+var2
+```
+
+    ## [1] 3202.311
+
+Calculations, ?change in mean and variance.
+
+``` r
+change_in_mean = mean2 / mean1
+change_in_mean
+```
+
+    ## [1] 1.25
+
+``` r
+change_in_var = var2 / var1
+change_in_var
+```
+
+    ## [1] 1.5625

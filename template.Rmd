@@ -1,7 +1,11 @@
 ---
 title: "Homework 1"
 author: Alexey Abramov
-output: github_document
+output: 
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: true
 ---
 
 # Setup
@@ -10,7 +14,10 @@ library(tidyverse)
 library(ggplot2)
 ```
 
-# Problem 1
+# Module 1
+## Problem 1
+
+### Read in data and perform calculations
 
 ```{r, results='markup'}
 problem1_df = 
@@ -26,21 +33,23 @@ sd(problem1_df$fe_level)
 
 ```
 
-# Problem 2
+## Problem 2
 
-# Problem 3
+### Work shown in Word document
 
-## Importing Data
+## Problem 3
+
+### Importing Data
 ```{r}
 problem3_df = read_table("./data/Pacemaker.txt")
 ```
 
-##Create a histogram
+### Create a histogram
 ```{r}
 hist(problem3_df$Time, col = "lightblue", main = "Pacemaker Data", xlab = "Time in Months")
 ```
 
-## Calculate the mean, median, variance and standard deviation.
+### Calculate the mean, median, variance and standard deviation.
 
 ```{r}
 mean(problem3_df$Time)
@@ -49,14 +58,15 @@ var(problem3_df$Time)
 sd(problem3_df$Time)
 ```
 
-## Calculate range
+### Calculate range
+
 ```{r}
 range(problem3_df$Time)
 ```
 
-# Problem 4
+## Problem 4
 
-## Read in data and Create a boxplot
+### Read in data and create a boxplot
 ```{r}
 problem4_df = read_table2("./data/BloodPressure.txt")
 
@@ -66,9 +76,9 @@ ggplot(problem4_df, aes(x= Race, y= BP, fill = Race)) +
   theme_classic()
 ```
 
-# Problem 5
+## Problem 5
 
-Create a random distribution of 20 test scores with mean = 250, sd = 50.  
+### Create a random distribution with 20 test scores with mean = 250, sd = 50.  
 ```{r}
 set.seed(124)
 problem5_df = 
@@ -83,7 +93,7 @@ var1 = var(problem5_df$testscore)
 var1
 ```
 
-Now increase the test scores by 25% and calculate the new variance.
+### Now increase the test scores by 25% and calculate the new variance.
 
 ```{r}
 problem5_df_2 = problem5_df$testscore*1.25
@@ -94,7 +104,7 @@ var2 = var(problem5_df_2)
 var2
 ```
 
-Calculations, ?change in mean and variance.
+### Calculations, ?change in mean and variance.
 
 ```{r}
 change_in_mean = mean2 / mean1
@@ -104,13 +114,34 @@ change_in_var = var2 / var1
 change_in_var
 ```
 
-# Problem 7
+# Module 2
+## Problem 7
 
+### Calculations shown
 ```{r}
 problem7_df = c(60, 30, 5, 1, 78, 16, 3, 2, 86, 10, 2, 1)
 p7_total = sum(problem7_df)
 (78+16+3+2) / p7_total *100
 (60 + 78 + 86) / 294
 (60+ 30+ 5+ 1) / 294
+```
+
+# Module 3
+
+## Binomial distributions
+
+### Tutorial
+To obtain a binomial probability for a single X value: 
+dbinom(x, n, p) 
+So for Example 1, we have: dbinom(0, 5, 0.15) 
+
+To obtain a probability for values less than or equal to X:
+pbinom(x, n, p) 
+So for Example 2, we have: pbinom(2, 5, 0.15)
+
+## Problem 9
+
+```{r}
+
 ```
 

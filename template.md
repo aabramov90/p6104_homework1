@@ -8,14 +8,14 @@ Alexey Abramov
 library(tidyverse)
 ```
 
-    ## ── Attaching packages ─────────────────────────────────────────────── tidyverse 1.3.0 ──
+    ## ── Attaching packages ────────────────────────────────────────────── tidyverse 1.3.0 ──
 
     ## ✓ ggplot2 3.3.2     ✓ purrr   0.3.4
     ## ✓ tibble  3.0.3     ✓ dplyr   1.0.2
     ## ✓ tidyr   1.1.2     ✓ stringr 1.4.0
     ## ✓ readr   1.3.1     ✓ forcats 0.5.0
 
-    ## ── Conflicts ────────────────────────────────────────────────── tidyverse_conflicts() ──
+    ## ── Conflicts ───────────────────────────────────────────────── tidyverse_conflicts() ──
     ## x dplyr::filter() masks stats::filter()
     ## x dplyr::lag()    masks stats::lag()
 
@@ -203,3 +203,25 @@ change_in_var
 ```
 
     ## [1] 1.5625
+
+# Problem 7
+
+``` r
+problem7_df = c(60, 30, 5, 1, 78, 16, 3, 2, 86, 10, 2, 1)
+p7_total = sum(problem7_df)
+(78+16+3+2) / p7_total *100
+```
+
+    ## [1] 33.67347
+
+``` r
+(60 + 78 + 86) / 294
+```
+
+    ## [1] 0.7619048
+
+``` r
+(60+ 30+ 5+ 1) / 294
+```
+
+    ## [1] 0.3265306

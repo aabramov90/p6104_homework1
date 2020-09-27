@@ -21,6 +21,7 @@ problem1_df =
 fivenum(c(15.2, 9.3, 7.6, 11.9, 10.4, 9.7, 20.4, 9.4, 11.5, 9.4, 8.3))
 mean(c(15.2, 9.3, 7.6, 11.9, 10.4, 9.7, 20.4, 9.4, 11.5, 9.4, 8.3))
 var(problem1_df$fe_level)
+
 sd(problem1_df$fe_level)
 
 ```
@@ -101,5 +102,15 @@ change_in_mean
 
 change_in_var = var2 / var1
 change_in_var
+```
+
+# Problem 7
+
+```{r}
+problem7_df = c(60, 30, 5, 1, 78, 16, 3, 2, 86, 10, 2, 1)
+p7_total = sum(problem7_df)
+(78+16+3+2) / p7_total *100
+(60 + 78 + 86) / 294
+(60+ 30+ 5+ 1) / 294
 ```
 

@@ -168,4 +168,31 @@ ppois(x, lambda)
 
 So for (b) above we have: 1 - ppois(3, 7.5) 
 
+## Problem 11 
+Calculations
+```{r}
+dpois(0, 2.5)
+ppois(4, 2.5)
+1 - ppois(6, 2.5)
+```
+
+11F Calculations
+```{r}
+ppois(2, 9)
+ppois(3, 9)
+ppois(4, 9)
+ppois(5, 9)
+```
+
+# Problem 12
+
+## Normal distribution
+
+To obtain a probability in R for values less than or equal to X: pnorm(x, mean, sd) 
+
+```{r}
+pnorm(92, 100, 6)
+1-pnorm(110, 100, 6)
+(pnorm(107, 100, 6)) - (pnorm(97, 100, 6))
+```
 

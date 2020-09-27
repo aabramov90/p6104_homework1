@@ -1722,18 +1722,21 @@ p7_total = sum(problem7_df)
 <pre class="r"><code>ppois(5, 9)</code></pre>
 <pre><code>## [1] 0.1156905</code></pre>
 </div>
-</div>
-<div id="problem-12" class="section level1">
-<h1>Problem 12</h1>
-<div id="normal-distribution" class="section level2">
-<h2>Normal distribution</h2>
+<div id="problem-12" class="section level2">
+<h2>Problem 12</h2>
+<div id="normal-distribution" class="section level3">
+<h3>Normal distribution</h3>
 <p>To obtain a probability in R for values less than or equal to X: pnorm(x, mean, sd)</p>
+<p>Normal probability plots can be made quickly in R using the qqnorm and qqline functions. If the data values for the Asthma example are stored in an object called asth and the ages for the Hypertension example are stored in an object called hyp, then the following code will produce normal probability plots along with lines to aid in checking for departures from linearity</p>
+<p>qqnorm(asth, main = “Q-Q Plot For Days Missed”) qqline(asth)</p>
+<p>qqnorm(hyp, main = “Q-Q Plot For Age”) qqline(hyp)</p>
 <pre class="r"><code>pnorm(92, 100, 6)</code></pre>
 <pre><code>## [1] 0.09121122</code></pre>
 <pre class="r"><code>1-pnorm(110, 100, 6)</code></pre>
 <pre><code>## [1] 0.04779035</code></pre>
 <pre class="r"><code>(pnorm(107, 100, 6)) - (pnorm(97, 100, 6))</code></pre>
 <pre><code>## [1] 0.56979</code></pre>
+</div>
 </div>
 </div>
 

@@ -184,11 +184,22 @@ ppois(4, 9)
 ppois(5, 9)
 ```
 
-# Problem 12
+## Problem 12
 
-## Normal distribution
+### Normal distribution
 
 To obtain a probability in R for values less than or equal to X: pnorm(x, mean, sd) 
+
+Normal probability plots can be made quickly in R using the qqnorm and qqline functions. If the data values for the Asthma example are stored in an object called asth and the ages for the Hypertension example are stored in an object called hyp, then the following code will produce normal probability plots along with lines to aid in checking for departures from linearity 
+
+qqnorm(asth, main = "Q-Q Plot For Days Missed") 
+qqline(asth) 
+
+qqnorm(hyp, main = "Q-Q Plot For Age") 
+qqline(hyp) 
+
+
+
 
 ```{r}
 pnorm(92, 100, 6)

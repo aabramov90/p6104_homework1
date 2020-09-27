@@ -131,6 +131,9 @@ p7_total = sum(problem7_df)
 ## Binomial distributions
 
 ### Tutorial
+
+The probability that a patient fails to follow up in a given month is 15%. A pilot study is conducted to assess feasibility involving 5 patients. 
+
 To obtain a binomial probability for a single X value: 
 dbinom(x, n, p) 
 So for Example 1, we have: dbinom(0, 5, 0.15) 
@@ -139,9 +142,30 @@ To obtain a probability for values less than or equal to X:
 pbinom(x, n, p) 
 So for Example 2, we have: pbinom(2, 5, 0.15)
 
-## Problem 9
+## Problem 10
+
+A test for the presence of antibodies to the AIDS virus in the blood has probability 0.93 of detecting the antibodies when they are present.  Suppose that during a year, 20 units of blood with AIDS antibodies pass through a blood bank.  
 
 ```{r}
-
+dbinom(20, 20, 0.93)
+dbinom(19, 20, 0.93)
+dbinom(1, 20, 0.07)
+pbinom(10, 20, 0.93)
 ```
+
+## Poisson Distribution
+
+### Tutorial
+
+Example: The emergency room at CUMC receives an average of 7.5 patients each hour. 
+To obtain a poisson probability for a single X value in R: 
+dpois(x, lambda)
+
+So for (a) above we have: dpois(9, 7.5) 
+
+To obtain a probability for values less than or equal to X in R: 
+ppois(x, lambda)
+
+So for (b) above we have: 1 - ppois(3, 7.5) 
+
 

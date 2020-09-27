@@ -1676,12 +1676,32 @@ p7_total = sum(problem7_df)
 <h2>Binomial distributions</h2>
 <div id="tutorial" class="section level3">
 <h3>Tutorial</h3>
+<p>The probability that a patient fails to follow up in a given month is 15%. A pilot study is conducted to assess feasibility involving 5 patients.</p>
 <p>To obtain a binomial probability for a single X value: dbinom(x, n, p) So for Example 1, we have: dbinom(0, 5, 0.15)</p>
 <p>To obtain a probability for values less than or equal to X: pbinom(x, n, p) So for Example 2, we have: pbinom(2, 5, 0.15)</p>
 </div>
 </div>
-<div id="problem-9" class="section level2">
-<h2>Problem 9</h2>
+<div id="problem-10" class="section level2">
+<h2>Problem 10</h2>
+<p>A test for the presence of antibodies to the AIDS virus in the blood has probability 0.93 of detecting the antibodies when they are present. Suppose that during a year, 20 units of blood with AIDS antibodies pass through a blood bank.</p>
+<pre class="r"><code>dbinom(20, 20, 0.93)</code></pre>
+<pre><code>## [1] 0.2342389</code></pre>
+<pre class="r"><code>dbinom(19, 20, 0.93)</code></pre>
+<pre><code>## [1] 0.3526177</code></pre>
+<pre class="r"><code>dbinom(1, 20, 0.07)</code></pre>
+<pre><code>## [1] 0.3526177</code></pre>
+<pre class="r"><code>pbinom(10, 20, 0.93)</code></pre>
+<pre><code>## [1] 2.708916e-07</code></pre>
+</div>
+<div id="poisson-distribution" class="section level2">
+<h2>Poisson Distribution</h2>
+<div id="tutorial-1" class="section level3">
+<h3>Tutorial</h3>
+<p>Example: The emergency room at CUMC receives an average of 7.5 patients each hour. To obtain a poisson probability for a single X value in R: dpois(x, lambda)</p>
+<p>So for (a) above we have: dpois(9, 7.5)</p>
+<p>To obtain a probability for values less than or equal to X in R: ppois(x, lambda)</p>
+<p>So for (b) above we have: 1 - ppois(3, 7.5)</p>
+</div>
 </div>
 </div>
 

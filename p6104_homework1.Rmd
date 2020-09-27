@@ -198,12 +198,16 @@ qqline(asth)
 qqnorm(hyp, main = "Q-Q Plot For Age") 
 qqline(hyp) 
 
+### Problem 12 a - e
+```{r}
+pnorm(96, 98, 0.62)
+pnorm(100, 98, 0.62) - pnorm(97, 98, 0.62)
+1 - pnorm(99, 98, 0.62)
+```
 
-
+### Problem 12 F
 
 ```{r}
-pnorm(92, 100, 6)
-1-pnorm(110, 100, 6)
-(pnorm(107, 100, 6)) - (pnorm(97, 100, 6))
+qnorm(0.975, 95, 2)
 ```
 
